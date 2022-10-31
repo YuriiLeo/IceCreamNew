@@ -1,0 +1,334 @@
+.backdrope {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 20;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    & .franchise-modal__wrapper {
+      transform: translate(-50%, -50%) scale(0.7);
+    }
+  }
+}
+
+.franchise-modal__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 40px 40px 25px 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 620px;
+  background-color: $even-section-bgc;
+  color: $secondary-text-color;
+  border-radius: 22px;
+  overflow: auto;
+
+  @media screen and (max-width: 320px) {
+    padding: 30px 25px 20px 25px;
+  }
+
+  @include mq(mobile) {
+    width: 100%;
+    max-width: 400px;
+  }
+  @include mq(tablet) {
+    width: 450px;
+  }
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-close--franchise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 20px;
+
+  @media screen and (max-width: 320px) {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  background-color: transparent;
+  border: none;
+  transform: scale(1);
+
+  cursor: url(../images/cursor-active1.png), default;
+  transition: transform $timing-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+  }
+}
+
+.icon-close--franchise {
+  fill: $light-mode-btnCotacts;
+  transition: fill $timing-function;
+}
+
+.button-close--franchise:hover .icon-close__franchise {
+  fill: $accent-mode-btn-bgc-honer;
+}
+
+// FORM
+.franchise-form__thumb {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+.franchise-form__title {
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: $light-mode-btnCotacts;
+  background-color: $portfolio-bgc-milkshake;
+}
+
+.franchise-form {
+  margin-top: 20px;
+  font-weight: 500;
+}
+.franchise-form__field {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid $underlining;
+  &:first-child {
+    border-top: 1px solid $underlining;
+  }
+  & > p {
+    width: 75px;
+    text-align: left;
+  }
+  & > label {
+    width: 100%;
+  }
+
+  &:hover .franchise-form__input,
+  &:focus .franchise-form__input {
+    border: 2px solid $portfolio-bgc-coffee;
+  }
+  &:hover .franchise-form__comment,
+  &:focus .franchise-form__comment {
+    border: 2px solid $portfolio-bgc-coffee;
+  }
+}
+.comment-area {
+  flex-direction: column;
+}
+
+.franchise-form__input {
+  padding: 12px;
+  width: 100%;
+  height: 20px;
+  border: transparent;
+  border-radius: 2px;
+  color: #907e82;
+  box-shadow: 0px 4px 10px rgba(212, 20, 67, 0.1);
+  transition: border $timing-function;
+  outline: transparent;
+}
+
+.comment-label {
+  margin-bottom: 10px;
+}
+
+.franchise-form__comment {
+  padding: 12px;
+  font-weight: 400;
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  resize: none;
+  color: #907e82;
+  box-shadow: 0px 4px 10px rgba(212, 20, 67, 0.1);
+  transition: border $timing-function;
+  outline: transparent;
+}
+.send-btn {
+  margin-top: 10px;
+  min-width: 161px;
+  min-height: 44px;
+  border: none;
+  border-radius: 22px;
+  cursor: url(../images/cursor-active1.png), default;
+
+  color: $main-text-color;
+  background-color: $light-mode-btnCotacts;
+  transition: background-color $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-mode-btn-bgc-honer;
+  }
+
+  @include mq(tablet) {
+    min-width: 191px;
+    &.franchise {
+      min-width: 174px;
+    }
+  }
+
+  @include mq(desktop) {
+    min-width: 198px;
+    &.franchise {
+      min-width: 180px;
+    }
+  }
+}
+
+// CHECKBOX
+
+.conditions {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 23px;
+
+  font-size: 12px;
+
+  position: relative;
+}
+
+.conditions__checkbox {
+  position: absolute;
+  top: 0;
+  right: -10px;
+
+  &:checked + .conditions__check {
+    background-color: $secondary-text-color;
+  }
+  &:checked .icon-check {
+    fill: $secondary-text-color;
+  }
+}
+
+.conditions__link.terms {
+  text-decoration: underline $portfolio-bgc-coffee;
+  color: $portfolio-bgc-coffee;
+}
+
+.conditions__check {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: -15px;
+
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid $secondary-text-color;
+  border-radius: 2px;
+  background-color: transparent;
+
+  & > .icon-check {
+    fill: $even-section-bgc;
+  }
+}
+
+// USEFULL LINKS
+
+.usefull-links {
+  position: relative;
+  margin-bottom: auto;
+  padding-left: 0;
+
+  font-size: 14px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.ice-cream-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $quote-bgc;
+}
+
+.ice-cream-icon {
+  fill: $accent-title-color;
+}
+
+.cream-color,
+.coffee-color,
+.milkshake-color {
+  transition: color $timing-function, background-color $timing-function, fill $timing-function;
+}
+
+.usefull-links__item {
+  &:hover .cream-color,
+  &:focus .cream-color {
+    background-color: $portfolio-bgc-cream;
+  }
+  &:hover .terms-cream,
+  &:focus .terms-cream {
+    color: $portfolio-bgc-cream;
+  }
+
+  &:hover .coffee-color,
+  &:focus .coffee-color {
+    background-color: $portfolio-bgc-coffee;
+  }
+  &:hover .terms-coffee,
+  &:focus .terms-coffee {
+    color: $portfolio-bgc-coffee;
+  }
+
+  &:hover .milkshake-color,
+  &:focus .milkshake-color {
+    background-color: $portfolio-bgc-milkshake;
+  }
+  &:hover .terms-milkshake,
+  &:focus .terms-milkshake {
+    color: $portfolio-bgc-milkshake;
+  }
+
+  &:hover .ice-cream-icon,
+  &:focus .ice-cream-icon {
+    fill: $main-text-color;
+  }
+}
+.terms {
+  color: inherit;
+  font-size: 12px;
+
+  @media screen and (max-width: 320px) {
+    & > p {
+      font-size: calc(7px + 5 * (100vw / 320));
+    }
+  }
+}

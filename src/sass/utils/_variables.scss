@@ -1,0 +1,53 @@
+//COLORS
+$hero-bgc: #ffb8ca;
+$odd-section-bgc: #e5e5e5;
+$even-section-bgc: #fff5f6;
+$portfolio-bgc-cream: #ffb8ca;
+$portfolio-bgc-coffee: #f0d1a5;
+$portfolio-bgc-milkshake: #c2e297;
+$quote-bgc: #fafafa;
+$contacts-bgc: #ffffff;
+$underlining: #e1e1e1;
+$underlining-modal: #e18298;
+
+$contacts-bgc-cafe: #f0d1a5;
+$contacts-bgc-foodTruck: #c2e297;
+
+$mobile-menu-bgc: #e17992;
+$mobile-menu-border: #e18298;
+$accent-bgc: #d41443;
+
+//text
+$accent-title-color: #d41443;
+$upper-title-color: #ffa5ba;
+$hero-uptitle-color: #ffffff;
+$main-subtitle-color: #000000;
+$main-text-color: #ffffff;
+$secondary-text-color: #907e82;
+$accent-text-color: #d41443;
+$time-color: #ffa5ba;
+
+//link
+$accent-link-color: #d41443;
+$main-link-color: #ffffff;
+$auth-nav-link-color: #907e82;
+$icon-bgc: #fea5bb;
+$link-ligth-bgc: #ffffff;
+$accent-link-hover: #c7133e;
+$ligth-link-hover: #ecebeb;
+
+//buttom
+$ligth-mode-btn: #d41443;
+$ligth-mode-btn-bgc: #ffffff;
+$ligth-mode-btn-bgc-hover: #ecebeb;
+$light-mode-btnCotacts: #d41342;
+
+$accent-mode-btn: #ffffff;
+$accent-mode-btn-bgc: #d41443;
+$accent-mode-btn-bgc-honer: #c7133e;
+
+// ANIMATION CONTACTS
+$timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// transition
+$transition-color-bgc: background-color $timing-function;

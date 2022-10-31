@@ -1,0 +1,31 @@
+.section-contacts {
+    background-image: linear-gradient(to bottom,
+            $contacts-bgc 25%,
+            $even-section-bgc 25%);
+
+    @include mq (tablet) {
+        background-image: linear-gradient(to bottom,
+                $contacts-bgc 23%,
+                $even-section-bgc 23%);
+    }
+
+    @include mq (desktop) {
+        background-image: linear-gradient(to bottom,
+                $contacts-bgc 20%,
+                $even-section-bgc 20%);
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq (tablet) {
+        flex-direction: row;
+
+        // Сітка
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}

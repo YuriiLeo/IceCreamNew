@@ -1,0 +1,178 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+
+  background: $mobile-menu-bgc;
+
+  width: 100vw;
+  max-width: 250px;
+  height: 100vh;
+  z-index: 9;
+
+  opacity: 0;
+  transform:translateY(100%);
+  transition: transform $timing-function, opacity $timing-function;
+
+  @include mq(tablet) {
+    max-width: 254px;
+    right: 0;
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  transform: translateX(0);
+  & .icon-close {
+      opacity: 1;
+    }
+}
+
+.mobile-menu__item {
+  padding-bottom: 11px;
+  @include fonts(14px, 1.3);
+  font-weight: 700;
+  text-align: start;
+
+  color: $main-link-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-title-color;
+  }
+
+  ::before {
+    display: list-item;
+    content: '';
+    border-top: 1px solid $mobile-menu-border;
+    width: 250px;
+    padding-bottom: 12px;
+    margin-left: -20px;
+  }
+}
+
+.mobile__mini-btn {
+  position: fixed;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background-color: transparent;
+
+  right: 14px;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+
+  fill: $accent-title-color;
+
+  border-radius: 50%;
+
+  z-index: 10;
+
+  cursor: url(../images/cursor-active1.png), default;
+  
+  @include mq(tablet) {
+    position: absolute;
+    right: 214px;
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
+
+  &--close {
+      top: 20px;
+  
+    @include mq(tablet) {
+        right: 23px;
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  &.is-active {
+    @include mq(tablet) {
+      right: 25px;
+      top: -17px;
+    }
+  }
+
+  &.is-active .icon-open {
+    opacity: 0;
+  }
+
+  &.is-active .icon-close {
+    opacity: 1;
+  }
+}
+
+.icon-open {
+  width: 20px;
+  height: 12px;
+  opacity: 1;
+  transition: transform $timing-function;
+}
+
+.icon-close {
+  width: 14px;
+  height: 14px;
+  fill: $accent-mode-btn;
+  opacity: 0;
+  transition: transform $timing-function;
+}
+
+.mobile-btn {
+  color: $ligth-mode-btn;
+  background-color: $ligth-mode-btn-bgc;
+  border-radius: 22px;
+
+  outline: transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: background-color $timing-function;
+
+  font-weight: 700;
+  @include fonts(14px, 1.3);
+
+  padding: 12px 48px 12px 60px;
+  margin-bottom: 19px;
+  position: relative;
+
+  @include mq(tablet) {
+    padding: 12px 43px 12px 43px;
+    margin: 0 12px 20px 12px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $ligth-mode-btn-bgc-hover;
+  }
+
+  &__icon {
+    margin-left: 18px;
+  }
+}
+
+.icon-arrow {
+  fill: currentColor;
+}
+
+.mobile-menu__link {
+  outline: transparent;
+  color: currentColor;
+}

@@ -1,0 +1,189 @@
+<header class="header">
+  <section class="section header-section">
+    <div class="container header__container">
+      <div class="logo">
+        <a href="/index.html"
+          ><img class="logo" src="/images/logo.png" alt="logo" width="199" height="50"
+        /></a>
+      </div>
+      <button
+        aria-label="Menu"
+        class="mobile__mini-btn"
+        data-mobile-open
+        aria-expanded="false"
+        type="button"
+      >
+        <svg class="mini-btn__icon" width="18" height="18">
+          <use class="icon-open" width="20" height="20" href="/images/icons.svg#icon-Burger"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu" data-menu>
+        <button aria-label="Menu" class="mobile__mini-btn mobile__mini-btn--close" data-mobile-close aria-expanded="false" type="button">
+          <svg class="mini-btn__icon" width="18" height="18">
+            <use class="icon-close" width="16" height="16" href="/images/icons.svg#icon-close" data-mobile-close></use>
+          </svg>
+        <button class="mobile-btn" type="button" data-modal-open-td>
+          Buy now
+          <svg class="mobile-btn__icon" width="4" height="8">
+            <use class="icon-arrow" href="/images/icons.svg#arrow"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a href="index.html" class="mobile-menu__link">Home</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#advantages" class="mobile-menu__link">About us</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#about" class="mobile-menu__link">How it’s made?</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#products" class="mobile-menu__link">Our products</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#contacts" class="mobile-menu__link">Contact</a>
+            </li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link"></a></li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="menu-nav">
+        <ul class="menu-nav__menu">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link menu-link__active">Home</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="#about" class="menu-nav__link">About us</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="#advantages" class="menu-nav__link">How it’s made?</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="#products" class="menu-nav__link">Our products</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="#contacts" class="menu-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button type="button" class="btn-header" data-modal-open-btn>
+        Buy now
+
+        <svg class="btn-header__icons" width="8" height="8">
+          <use href="/images/icons.svg#arrow"></use>
+        </svg>
+      </button>
+
+      <!--modal ds-->
+      <div class="backdrope-header is-hidden" data-modal-btn>
+        <div class="header-modal__wrapper">
+          <button class="header-button__close" type="button" data-modal-close-btn>
+            <svg class="header-icon__close" width="20" height="20">
+              <use href="images/icons.svg#close-franchise"></use>
+            </svg>
+          </button>
+          <div class="header-form__thumb">
+            <h3 class="header-form__title">Work for you</h3>
+            <form class="header-form">
+              <div class="header-form__field">
+                <p>Name</p>
+                <label>
+                  <input class="header-form__input" name="user-name" type="text" required />
+                </label>
+              </div>
+              <div class="header-form__field">
+                <p>Mobile</p>
+                <label>
+                  <input class="header-form__input" name="user-tel" type="tel" required />
+                </label>
+              </div>
+              <div class="header-form__field">
+                <p>Email</p>
+                <label>
+                  <input class="header-form__input" name="user-email" type="email" required />
+                </label>
+              </div>
+              <div class="header-form__field">
+                <label class="header-time__text">Specify the time and date of delivery:</label>
+                <div class="data">
+                  <input
+                    class="header-form__input-time"
+                    type="datetime-local"
+                    name="partydate"
+                    value="2022-05-11T08:30"
+                  />
+                </div>
+              </div>
+              <div class="header-form__field header-comment__area">
+                <p class="header-comment-label">Comment</p>
+                <label>
+                  <textarea class="header-form__comment" name="form__comment" rows="4"></textarea>
+                </label>
+              </div>
+            </form>
+            <button class="buy-btn" type="submit">Buy now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- end modal ds-->
+      <div class="backdrope-header-td is-hidden" data-modal-td>
+        <div class="header-td-modal__wrapper">
+          <button class="header-td-button__close" type="button" data-modal-close-td>
+            <svg class="header-td-icon__close" width="20" height="20">
+              <use href="images/icons.svg#close-franchise"></use>
+            </svg>
+          </button>
+          <div class="header-td-form__thumb">
+            <h3 class="header-td-form__title">Work for you</h3>
+            <form class="header-td-form">
+              <div class="header-td-form__field">
+                <p>Name</p>
+                <label>
+                  <input class="header-td-form__input" name="user-name" type="text" required />
+                </label>
+              </div>
+              <div class="header-td-form__field">
+                <p>Mobile</p>
+                <label>
+                  <input class="header-td-form__input" name="user-tel" type="tel" required />
+                </label>
+              </div>
+              <div class="header-td-form__field">
+                <p>Email</p>
+                <label>
+                  <input class="header-td-form__input" name="user-email" type="email" required />
+                </label>
+              </div>
+              <div class="header-td-form__field">
+                <label class="header-td-time__text">Specify the time and date of delivery:</label>
+                <div class="data">
+                  <input
+                    class="header-td-form__input-time"
+                    type="datetime-local"
+                    name="partydate"
+                    value="2022-05-11T08:30"
+                  />
+                </div>
+              </div>
+              <div class="header-td-form__field header-td-comment__area">
+                <p class="header-td-comment-label">Comment</p>
+                <label>
+                  <textarea
+                    class="header-td-form__comment"
+                    name="form__comment"
+                    rows="5"
+                  ></textarea>
+                </label>
+              </div>
+            </form>
+            <button class="buy-btn" type="submit">Buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>

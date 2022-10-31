@@ -1,0 +1,174 @@
+.contacts__card {
+  padding: 40px 32px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  width: 100%;
+  max-width: 280px;
+  height: 100%;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  text-align: initial;
+
+  background-color: $contacts-bgc;
+  border-radius: 24px;
+  color: $secondary-text-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  transform: scale(1);
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 40px rgba(212, 20, 68, 0.245);
+  }
+
+  text-align: initial;
+
+  background-color: $contacts-bgc;
+  border-radius: 24px;
+  color: $secondary-text-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+  @include mq(tablet) {
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+    // Сітка
+    flex-basis: calc((100% - 64px) / 3);
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: 224px;
+
+    font-size: 14px;
+    line-height: 1.64;
+  }
+
+  @include mq(desktop) {
+    padding: 40px;
+    max-width: 395px;
+
+    font-size: 16px;
+    line-height: 1.81;
+  }
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid $underlining;
+  }
+  &:not(:first-child) {
+    padding-top: 24px;
+  }
+
+  @include mq(tablet) {
+    &:not(:last-child) {
+      padding-bottom: 32px;
+    }
+
+    &:not(:first-child) {
+      padding-top: 32px;
+    }
+  }
+}
+
+.contacts__agency-type {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  line-height: 1.83;
+
+  text-align: center;
+
+  @include mq(tablet) {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.87;
+  }
+}
+
+.cafe {
+  min-width: 80px;
+  min-height: 16px;
+  border-radius: 4px;
+  color: $main-text-color;
+  background-color: $contacts-bgc-cafe;
+
+  @include mq(tablet) {
+    min-width: 73px;
+    min-height: 28px;
+  }
+
+  @include mq(desktop) {
+    min-width: 75px;
+  }
+}
+.food-truck {
+  min-width: 130px;
+  min-height: 16px;
+  border-radius: 4px;
+  color: $main-text-color;
+  background-color: $contacts-bgc-foodTruck;
+
+  @include mq(tablet) {
+    min-width: 138px;
+    min-height: 28px;
+  }
+}
+
+.contacts__agency-location {
+  margin-bottom: 8px;
+  color: $main-subtitle-color;
+  line-height: 1.83;
+
+  @include mq(tablet) {
+    margin-bottom: 12px;
+    line-height: 1.85;
+  }
+  @include mq(desktop) {
+    margin-bottom: 8px;
+    line-height: 1.87;
+  }
+}
+
+.contacts__schedule {
+  line-height: 1.83;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  @include mq(tablet) {
+    line-height: 1.85;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  @include mq(desktop) {
+    line-height: 1.87;
+  }
+
+  & > .contacts__work-day {
+    color: $main-subtitle-color;
+  }
+  & > .contacts__work-time {
+    text-transform: uppercase;
+    color: $upper-title-color;
+  }
+}
+
+.contacts__link {
+  cursor: url(../images/cursor-active1.png), default;
+
+  color: $secondary-text-color;
+  transition: color $timing-function;
+}
+.contacts__link-item:hover .contacts__link,
+.contacts__link-item:focus .contacts__link {
+  color: $accent-text-color;
+}
