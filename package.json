@@ -1,8 +1,8 @@
 {
-  "name": "team_project_IceCream",
+  "name": "IceCreamNew",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/YuriiLeo/IceCreamNew",
+  "homepage": "https://yuriileo.github.io/IceCreamNew/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /parcel-project-template/"
