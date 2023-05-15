@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="headerNav">
   <section class="section header-section">
     <div class="container header__container">
       <div class="logo">
@@ -17,6 +17,7 @@
           <use class="icon-open" width="20" height="20" href="/images/icons.svg#icon-Burger"></use>
         </svg>
       </button>
+
       <div class="mobile-menu" data-menu>
         <button aria-label="Menu" class="mobile__mini-btn mobile__mini-btn--close" data-mobile-close aria-expanded="false" type="button">
           <svg class="mini-btn__icon" width="18" height="18">
@@ -29,9 +30,9 @@
           </svg>
         </button>
         <nav class="mobile-menu__nav">
-          <ul class="mobile-menu__list">
+          <ul class="mobile-menu__list" link-close>
             <li class="mobile-menu__item">
-              <a href="index.html" class="mobile-menu__link">Home</a>
+              <a href="#headerNav" class="mobile-menu__link">Home</a>
             </li>
             <li class="mobile-menu__item">
               <a href="#advantages" class="mobile-menu__link">About us</a>
@@ -49,6 +50,8 @@
           </ul>
         </nav>
       </div>
+
+
       <nav class="menu-nav">
         <ul class="menu-nav__menu">
           <li class="menu-nav__item">
