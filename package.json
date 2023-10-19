@@ -1,11 +1,11 @@
 {
-  "name": "IceCreamNew",
+  "name": "ice_cream_new",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://yuriileo.github.io/IceCreamNew/",
+  "homepage": "https://yuriileo.github.io/ice_cream_new/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /IceCreamNew/"
+    "build": "parcel build src/*.html --public-url /ice_cream_new/"
   },
   "repository": {
     "type": "git",

@@ -1,15 +1,27 @@
-# Parcel template
+# Ice Cream
 
-Цей проект було створено за допомогою Parcel. Для знайомства та налаштування
-додаткових можливостей [зверніться до документації](https://parceljs.org/).
+## Description
 
-## Підготовка проекту
+This is a simple ice cream parlor web application. Allows customers to view ice
+cream maker information, available flavors, reviews, and addresses of cafes and
+stores. It is also possible to leave an application for obtaining a franchise.
 
-1. Переконайтеся, що на комп'ютері встановлено LTS-версію Node.js.
-   [Скачай та встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Склонуй цей репозиторій.
-3. Встанови залежності проекту в терміналі командою `npm install`.
-4. Запусти режим розробки, виконавши команду `npm start`.
-5. Перейди в браузері за адресою [http://localhost:1234](http://localhost:1234).
-   Ця сторінка буде автоматично перезавантажуватись після збереження змін у
-   файли проекту.
+![Ice Cream App](/assets/ice_cream_screen.png)
+
+## Usage
+
+You can use this project to create a web presence for your ice cream shop. To
+get started, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Install the project dependencies using `npm install`.
+3. Start the development server with `npm start`.
+4. Open the app in your web browser at
+   [http://localhost:1234](http://localhost:1234).
+
+## Scripts
+
+This project includes the following scripts:
+
+- `start`: Starts the development server using Parcel.
+- `build`: Builds the app for production using Parcel.
